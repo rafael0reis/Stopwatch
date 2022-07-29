@@ -18,7 +18,7 @@
             justify-content: center;
             align-items: center;
         }
-        div{
+        div.counter{
             margin-top: 30vh;
             text-align: center;
         }
@@ -33,12 +33,14 @@
     </style>
 </head>
 <body>
-    <div>
+    <div class="counter">
         <h1>Counter</h1>
         <h2 id="stopwatch-counter">00:00:00</h2>
-        <button class="start-btn" style="background-color: green;">Start</button>
-        <button class="stop-btn" style="background-color: gray;">Stop</button>
-        <button class="restart-btn" style="background-color: red;">Restart</button>
+        <div class="buttons">
+            <button class="start-btn" style="background-color: green;">Start</button>
+            <button class="stop-btn" style="background-color: gray;">Stop</button>
+            <button class="restart-btn" style="background-color: red;">Restart</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
