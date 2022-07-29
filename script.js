@@ -31,21 +31,20 @@ const restart = () => {
 
 const stopwatch = () => {
     sec++
+    if(sec>59){
+        sec=0
+        min++
+    }
+    if(min>59){
+        min=0
+        hrs++
+    }
     counter.textContent = 
     (hrs<10?'0'+hrs:hrs)
     +':'+
     (min<10?'0'+min:min)
     +':'+
     (sec<10?'0'+sec:sec)
-
-    if(sec===60){
-        sec=0
-        min++
-    }
-    if(min===60){
-        min=0
-        hrs++
-    }
 }
 
 document.querySelector('.start-btn').addEventListener('click', start)
